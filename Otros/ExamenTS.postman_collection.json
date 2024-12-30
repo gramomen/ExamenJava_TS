@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "513efeb6-4849-4eea-b28f-c7c4f14f9574",
+		"name": "ExamenTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5602208"
+	},
+	"item": [
+		{
+			"name": "Vacaciones",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descripcion\": \"Vacaciones\",\r\n    \"fechaInicio\": \"2024-12-01T11:00:00\",\r\n    \"fechaFin\": \"2024-12-10T11:00:00\",\r\n    \"estado\": true,\r\n    \"detallePersona\": [\r\n        {\r\n            \"nombres\": \"Gorky\",\r\n            \"apellidosPaterno\": \"Ramos\",\r\n            \"apellidosMaterno\": \"Mendoza\",\r\n            \"dni\": \"87654321\",\r\n            \"edad\": \"30\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vacaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vacaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cursos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETBYID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cursos/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idMatricula\": 2,\r\n    \"fechaMatricula\":\"2024-09-19T11:00:00\",\r\n    \"estudiante\": { \"idEstudiante\":  7\r\n                    },\r\n    \"estado\": true,\r\n    \"detalleMatricula\": [\r\n        {\r\n            \"curso\":{ \"idCurso\":  1},\r\n            \"aula\": \"1B\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/matriculas/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"matriculas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/cursos/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cursos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
